@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="css/style.min.css">
   <title>HW BONUS</title>
@@ -22,7 +23,7 @@
       <form class="feedback-popup__form" action="#">
         <label class="feedback-popup__label">
           Ваш номер телефону
-          <input class="feedback-popup__input" type="tel" required>
+          <input class="feedback-popup__input" id="feedback-popup__input" type="tel" required>
         </label>
         <button class="feedback-popup__btn" type="submit">замовити дзвінок</button>
       </form>
@@ -38,7 +39,11 @@
       <div class="container">
         <div class="header-top__inner">
           <a href="#" class="header-top__logo">
-            <img src="images/logo.png" alt="">
+            <img class="header-top__logo-img" src="images/logo.svg" alt="">
+            <span class="header-top__logo-text">
+              Львівський
+              Будинок Вчених
+            </span>
           </a>
           <ul class="header-top__nav">
             <li class="header-top__nav-item header-top__nav-item--active">
@@ -63,7 +68,8 @@
               <a class="header-top__nav-link" href="#footer">контакти</a>
             </li>
           </ul>
-          <button class="header-top__btn" type="button">Консультація</button>
+          <button class="header-top__btn" type="button" href="#footer__form"
+            onclick="focusMethod()">Консультація</button>
           <button class="burger-btn" type="button">
             <span></span>
           </button>
@@ -83,20 +89,21 @@
                 відомого австрійського архітектурного бюро “Гельмер і Фельнер” в далекому 1898 році, як Шляхетське або
                 Національне касино.
               </p>
-              <button class="header-main__item-btn" type="button">отримати консультацію</button>
+              <button class="header-main__item-btn" type="button" href="#footer__form" onclick="focusMethod()">отримати
+                консультацію</button>
             </div>
           </div>
         </div>
         <div class="header-main__item" style="background-image: url('images/slider/2.jpg');">
           <div class="header-main__item-content">
             <h1 class="header-main__item-title">
-              Історія Будинку вчених
+              Конференції, ділові зустрічі,
+              виставки, прийоми та вечірки
             </h1>
             <div class="header-main__item-inner">
               <p class="header-main__item-text">
-                Коштовною перлиною в архітектурному намисті Львова постає Будинок вчених. Зведено його за проєктом
-                відомого австрійського архітектурного бюро “Гельмер і Фельнер” в далекому 1898 році, як Шляхетське або
-                Національне касино.
+                Ми завжди запропонуємо для Вашої події найвибагливіші зали, аудіо- та відеотехніку. А також, в Будинку
+                вчених працює ресторан ‘Helmer&Felmer”, який запропонує Вам вишукане меню.
               </p>
               <button class="header-main__item-btn" type="button">отримати консультацію</button>
             </div>
@@ -105,13 +112,13 @@
         <div class="header-main__item" style="background-image: url('images/slider/3.jpg');">
           <div class="header-main__item-content">
             <h1 class="header-main__item-title">
-              Історія Будинку вчених
+              Кейтеринг у Будинку вчених
             </h1>
             <div class="header-main__item-inner">
               <p class="header-main__item-text">
-                Коштовною перлиною в архітектурному намисті Львова постає Будинок вчених. Зведено його за проєктом
-                відомого австрійського архітектурного бюро “Гельмер і Фельнер” в далекому 1898 році, як Шляхетське або
-                Національне касино.
+                Плануєте проведення урочистого заходу, та не знаєте як усе організувати? Залишіть всі клопоти на нас!
+                Професійні кейтерингові послуги - виїздна організація заходів, відповідальне виконання та індивідуальний
+                підхід.
               </p>
               <button class="header-main__item-btn" type="button">отримати консультацію</button>
             </div>
@@ -135,7 +142,7 @@
       </div>
     </div>
     <button class="header-main__btn" type="button">
-      <div class="header-main__btn-circle">
+      <div class="header-main__btn-circle" onclick="focusMethodTwo()">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone"
           class="svg-inline--fa fa-phone fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path fill="currentColor"
@@ -483,8 +490,8 @@
               </p>
             </div>
           </address>
-          <form class="footer__form" action="#">
-            <input class="footer__form-input" type="text" placeholder="Ім’я" required>
+          <form class="footer__form" action="#" id="footer__form">
+            <input class="footer__form-input" id="footer__form-input" type="text" placeholder="Ім’я" required>
             <input class="footer__form-input" type="text" placeholder="E-mail" required>
             <input class="footer__form-input" type="tel" placeholder="Телефон" required>
             <textarea class="footer__form-textarea" placeholder="Коментар"></textarea>
